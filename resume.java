@@ -7,7 +7,7 @@
 * as following Agile and XP for development. More importantly, I posses the   *
 * desire to expand my horizon learning new technologies and concepts.         *
 ******************************************************************************/
-public class Resume{
+public class Resume<SoftwareDeveloper>{
   public static class Person implements TeamWorker, GoodPresenter{
     private String name = "Nibras Ahamed Reeza";
     private String email = "nibras@nibrasweb.com";
@@ -15,8 +15,14 @@ public class Resume{
     private String website = "http://www.nibrasweb.com"; // IMPORTANT!
   }
 
-  public static class Skill{
-    private double java = 0.90;     /////////////////////////////////////////
-    private double csharp = 0.60;   //////////////////////////////////
+  public static enum Skill{
+    JAVA(90),     ///////////////////////
+    C_SHARP(60);  ///////////////
+
+    private int skillPercentage;
+
+    private Skill(int sP){
+        this.skillPercentage = sP;
+    }
   }
 }
